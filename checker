@@ -24,12 +24,13 @@ function isLinuxSupported(appid) {
 }
 
 function usage() {
-  console.error("./checker appid");
-  console.error("Example: ./checker 255220");
+  console.error("./checker appid [appid ...]");
+  console.error("Example: ./checker 255220 440");
 }
 
 (function() {
-  var index = 2, appid;
+  var index = 2;
+  var appids = [];
   if (process.argv.length <= 2) {
     usage();
     process.exit();
@@ -39,14 +40,18 @@ function usage() {
       usage();
       process.exit();
     } else {
+      var appid;
       appid = parseInt(process.argv[index]);
+      if (isNaN(appid)) {
+        console.error("Appid must be an integer.");
+        process.exit();
+      }
+      appids.push(appid);
     }
     index++;
   }
 
-  if (isNaN(appid)) {
-    console.error("Appid must be an integer.");
-    process.exit();
+  for (var a of appids) {
+    isLinuxSupported(a);
   }
-  isLinuxSupported(appid);
 })();
