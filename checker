@@ -13,17 +13,17 @@ function isLinuxSupported(appid) {
       var data = completeData[Object.keys(completeData)[0]].data;
       console.log("Linux supported for " + data.name + " ? " + data.platforms.linux);
       if (data.platforms.linux === true) {
-	notify.notify("Supported !", {
-	  title: "Steam checker - " + data.name,
-	  image: "/usr/share/icons/gnome/48x48/status/starred.png"
-	});
+        notify.notify("Supported !", {
+          title: "Steam checker - " + data.name,
+          image: "/usr/share/icons/gnome/48x48/status/starred.png"
+        });
       } else {
-	/*
-	   notify.notify("Still not supported", {
-	   title: "Steam checker - " + data.name,
-	   image: "/usr/share/icons/gnome/48x48/status/dialog-error.png"
-	   });
-	   */
+        /*
+           notify.notify("Still not supported", {
+           title: "Steam checker - " + data.name,
+           image: "/usr/share/icons/gnome/48x48/status/dialog-error.png"
+           });
+           */
       }
     } else {
       console.log(response.statusCode);
@@ -41,7 +41,7 @@ function launch(appid, interval) {
       var completeData = JSON.parse(body);
       var data = completeData[Object.keys(completeData)[0]].data;
       notify.notify("Beginning check for " + data.name +  " every " + interval + " seconds", {
-	title: "Steam checker"
+        title: "Steam checker"
       });
     }
   });
