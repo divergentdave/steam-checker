@@ -6,8 +6,7 @@ In a terminal
 
 ```
 git clone https://github.com/divergentdave/steam-checker.git && cd steam-checker
-```
-```
+npm install
 ./checker --help
 ```
 
