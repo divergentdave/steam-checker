@@ -4,9 +4,10 @@
   "description": "Steam checker",
   "main": "checker.js",
   "scripts": {
-    "test": "node checker.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "GNULetik",
+  "author": "divergentdave",
+  "repository": "https://github.com/divergentdave/steam-checker.git",
   "license": "ISC",
   "dependencies": {
     "request": "^2.79.0"

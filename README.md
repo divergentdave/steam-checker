@@ -1,20 +1,18 @@
 # steam-checker
-Tool to be notified when a game is available on linux
+Tool to be notified when a game is available on Linux.
 
-## How to use ?
-
+## Usage
 In a terminal
+
 ```
-git clone https://github.com/GNUletik/steam-checker.git && cd steam-checker
+git clone https://github.com/divergentdave/steam-checker.git && cd steam-checker
 ```
 ```
 ./checker --help
 ```
 
+Make sure you have node installed.
 
-Make sure you have libnotify and nodejs installed :)
-
-## How it works ?
-
-This software connects to the Steam API and checks if the game is avaible on linux every 5 seconds 
-It use nodeJS, request module, and libnotify module
+## How does it work?
+This software connects to the Steam API and checks if the game is avaible on Linux.
+It use Node.js and the request package
